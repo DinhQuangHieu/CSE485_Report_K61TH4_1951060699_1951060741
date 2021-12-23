@@ -1,41 +1,6 @@
 /*CSS for header*/
 .col-md-12{
     padding:0;
-   
-}
-
-.image-fill img{
-    width: 130px;
-    margin-right:20px;
-   }
-
-/*CSS for writer*/
-.my_intro{
-    text-align: justify;
-}
-
-.fs-1{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    color:rgba(143, 88, 73, 1)
-    
-}
-
-.col-md-6 {
-    align-items: center;
-    display: flex;
-}
-.col-md-7 img{
-    width: 500px;
-    margin-left:100px;
-   }
-   
-/*CSS for header*/
-.col-md-12{
-    padding:0;
 }
 
 /*CSS for writer*/
