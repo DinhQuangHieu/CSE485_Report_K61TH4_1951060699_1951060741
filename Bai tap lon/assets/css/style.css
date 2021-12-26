@@ -46,6 +46,8 @@
 .col-md-6{
     
   
+    
+    
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   
@@ -58,7 +60,7 @@
     line-height: 40px;
     overflow: hidden;
     outline-width: 2px;
-    padding: 0 12px;
+    padding:0 20px;
     position: relative;
     text-align: center;
     text-decoration: none;
