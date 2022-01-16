@@ -1,69 +1,24 @@
-/*CSS for header*/
-
-.col-md-12 {
-    padding: 0;
+.col-md-8 img{
+    margin-left: 100px;
 }
 
-
-/*CSS for writer*/
-
-.my_intro {
-    text-align: justify;
+#header img{
+    width: 150px;
+    margin-left: 120px;
+    margin-top: 20px;
 }
-
-.btn {
-    padding: 10px 24px;
-    border: 0 none;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+#header a{
+    padding-left: 200px;
+    padding-right: 50px;
 }
-
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus {
-    outline: 0 none;
-}
-
-.btn-primary {
-    background: #0099cc;
-    color: #ffffff;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open>.dropdown-toggle.btn-primary {
-    background: #33a6cc;
-}
-
-.btn-primary:active,
-.btn-primary.active {
-    background: #007299;
-    box-shadow: none;
-}
-.col-md-6{
-    
-  
-    
-    
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1.6rem;
-    font-weight: 600;
-    font-family: inherit;
-    height: 40px;
-    line-height: 40px;
-    overflow: hidden;
-    outline-width: 2px;
-    padding:0 20px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
+.signin-btn{
+   
+    margin-left: 400px;
+    outline: none !important;
+    border: 2px solid rgb(21, 157, 202);
+    border-radius: 50px;
+    background: transparent;
+    color: rgb(21, 157, 202);
 }
 .image-fill img{
       width: 150px;
