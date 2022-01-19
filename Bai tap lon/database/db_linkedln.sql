@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 18, 2022 lúc 09:25 PM
+-- Thời gian đã tạo: Th1 19, 2022 lúc 08:54 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.12
 
@@ -49,18 +49,6 @@ INSERT INTO `baiviet` (`MaBaiViet`, `MaNguoiDung`, `Tieude`, `NoiDung`, `AnhBaiV
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `binhluan`
---
-
-CREATE TABLE `binhluan` (
-  `MaBaiViet` int(10) NOT NULL,
-  `MaNguoiDung` int(10) NOT NULL,
-  `NoiDung` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `taikhoan`
 --
 
@@ -81,18 +69,6 @@ INSERT INTO `taikhoan` (`TenDangNhap`, `Email`, `MatKhau`, `MaNguoiDung`) VALUES
 ('QuangHieu', 'hieujanuzaj@gmail.com', 'hieu123', 1),
 ('Ragnick', 'ragnick@gmail.com', 'nick123', 3),
 ('Solsa', 'solsa@gmail.com', 'solsa123', 4);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `thich`
---
-
-CREATE TABLE `thich` (
-  `MaBaiViet` int(10) NOT NULL,
-  `MaNguoiDung` int(10) NOT NULL,
-  `Thich` tinyint(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -131,25 +107,11 @@ ALTER TABLE `baiviet`
   ADD UNIQUE KEY `MaNguoiDung` (`MaNguoiDung`);
 
 --
--- Chỉ mục cho bảng `binhluan`
---
-ALTER TABLE `binhluan`
-  ADD UNIQUE KEY `MaBaiViet` (`MaBaiViet`),
-  ADD UNIQUE KEY `MaNguoiDung` (`MaNguoiDung`);
-
---
 -- Chỉ mục cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
   ADD PRIMARY KEY (`TenDangNhap`),
   ADD UNIQUE KEY `Email` (`Email`),
-  ADD UNIQUE KEY `MaNguoiDung` (`MaNguoiDung`);
-
---
--- Chỉ mục cho bảng `thich`
---
-ALTER TABLE `thich`
-  ADD UNIQUE KEY `MaBaiViet` (`MaBaiViet`),
   ADD UNIQUE KEY `MaNguoiDung` (`MaNguoiDung`);
 
 --
@@ -185,24 +147,10 @@ ALTER TABLE `baiviet`
   ADD CONSTRAINT `baiviet_ibfk_1` FOREIGN KEY (`MaNguoiDung`) REFERENCES `thongtinnguoidung` (`MaNguoiDung`);
 
 --
--- Các ràng buộc cho bảng `binhluan`
---
-ALTER TABLE `binhluan`
-  ADD CONSTRAINT `binhluan_ibfk_1` FOREIGN KEY (`MaBaiViet`) REFERENCES `baiviet` (`MaBaiViet`),
-  ADD CONSTRAINT `binhluan_ibfk_2` FOREIGN KEY (`MaNguoiDung`) REFERENCES `thongtinnguoidung` (`MaNguoiDung`);
-
---
 -- Các ràng buộc cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
   ADD CONSTRAINT `taikhoan_ibfk_1` FOREIGN KEY (`MaNguoiDung`) REFERENCES `thongtinnguoidung` (`MaNguoiDung`);
-
---
--- Các ràng buộc cho bảng `thich`
---
-ALTER TABLE `thich`
-  ADD CONSTRAINT `thich_ibfk_1` FOREIGN KEY (`MaBaiViet`) REFERENCES `baiviet` (`MaBaiViet`),
-  ADD CONSTRAINT `thich_ibfk_2` FOREIGN KEY (`MaNguoiDung`) REFERENCES `thongtinnguoidung` (`MaNguoiDung`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
